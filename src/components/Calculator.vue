@@ -142,7 +142,7 @@
         </div>
         <div class="column is-7 is-result-columns">
           <p>
-            Obesity Class I
+            Obesity Class II
           </p>
         </div>
       </div>
@@ -157,7 +157,7 @@
         </div>
         <div class="column is-7 is-result-columns">
           <p>
-            Obesity Class I
+            Obesity Class III
           </p>
         </div>
       </div>
