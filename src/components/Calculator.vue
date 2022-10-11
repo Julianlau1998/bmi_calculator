@@ -122,7 +122,22 @@
       <div class="columns is-mobile is-justify-content-center is-align--center">
         <div class="column is-5 is-result-columns">
           <p>
-            24.9 - 29.9
+            25.0 - 29.9
+          </p>
+        </div>
+        <div class="column is-7 is-result-columns">
+          <p>
+            Pre Obesity
+          </p>
+        </div>
+      </div>
+
+      <hr class="hr bmiBottom">
+
+      <div class="columns is-mobile is-justify-content-center is-align--center">
+        <div class="column is-5 is-result-columns">
+          <p>
+            30.0 - 34.9
           </p>
         </div>
         <div class="column is-7 is-result-columns">
@@ -137,7 +152,7 @@
       <div class="columns is-mobile is-justify-content-center is-align--center">
         <div class="column is-5 is-result-columns">
           <p>
-            29.9 - 34.9
+            35.0 - 39.9
           </p>
         </div>
         <div class="column is-7 is-result-columns">
@@ -152,7 +167,7 @@
       <div class="columns is-mobile is-justify-content-center is-align--center">
         <div class="column is-5 is-result-columns">
           <p>
-            34.9 - 39.9
+            > 40.0
           </p>
         </div>
         <div class="column is-7 is-result-columns">
