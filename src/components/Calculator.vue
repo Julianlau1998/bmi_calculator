@@ -64,7 +64,7 @@
         BMI: {{ bmi }}
       </h1>
       <h2
-          v-if="age >= 20"
+          v-if="age >= 20 && bmi > 0"
           class="is-size-4 mb-4"
           :style="`color: ${result.color};`"
       >
@@ -91,12 +91,12 @@
 
       <div class="columns is-mobile is-justify-content-center is-align--center">
         <div class="column is-5 is-result-columns">
-          <p>
+          <p :style=" bmi < 18.5 && age >= 20 ? `color: ${result.color};` : ''">
             Below 18.5
           </p>
         </div>
         <div class="column is-7 is-result-columns">
-          <p>
+          <p :style=" bmi < 18.5 && age >= 20 ? `color: ${result.color};` : ''">
             Underweight
           </p>
         </div>
@@ -106,12 +106,12 @@
 
       <div class="columns is-mobile is-justify-content-center is-align--center">
         <div class="column is-5 is-result-columns">
-          <p>
+          <p :style="bmi < 25 && bmi > 0 && bmi >= 18.5 && age >= 20 ? `color: ${result.color};` : ''">
             18.5 - 24.9
           </p>
         </div>
         <div class="column is-7 is-result-columns">
-          <p>
+          <p :style="bmi < 25 && bmi >= 18.5 && age >= 20 ? `color: ${result.color};` : ''">
             Normal
           </p>
         </div>
@@ -121,12 +121,12 @@
 
       <div class="columns is-mobile is-justify-content-center is-align--center">
         <div class="column is-5 is-result-columns">
-          <p>
+          <p :style="bmi < 30 && bmi >= 25 && age >= 20 ? `color: ${result.color};` : ''">
             25.0 - 29.9
           </p>
         </div>
         <div class="column is-7 is-result-columns">
-          <p>
+          <p :style="bmi < 30 && bmi >= 25 && age >= 20 ? `color: ${result.color};` : ''">
             Pre Obesity
           </p>
         </div>
@@ -136,12 +136,12 @@
 
       <div class="columns is-mobile is-justify-content-center is-align--center">
         <div class="column is-5 is-result-columns">
-          <p>
+          <p :style="bmi < 35 && bmi >= 30 && age >= 20 ? `color: ${result.color};` : ''">
             30.0 - 34.9
           </p>
         </div>
         <div class="column is-7 is-result-columns">
-          <p>
+          <p :style="bmi < 35 && bmi >= 30 && age >= 20 ? `color: ${result.color};` : ''">
             Obesity Class I
           </p>
         </div>
@@ -151,12 +151,12 @@
 
       <div class="columns is-mobile is-justify-content-center is-align--center">
         <div class="column is-5 is-result-columns">
-          <p>
+          <p :style="bmi < 40 && bmi >= 35 && age >= 20 ? `color: ${result.color};` : ''">
             35.0 - 39.9
           </p>
         </div>
         <div class="column is-7 is-result-columns">
-          <p>
+          <p :style="bmi < 40 && bmi >= 35 && age >= 20 ? `color: ${result.color};` : ''">
             Obesity Class II
           </p>
         </div>
@@ -166,12 +166,12 @@
 
       <div class="columns is-mobile is-justify-content-center is-align--center">
         <div class="column is-5 is-result-columns">
-          <p>
-            > 40.0
+          <p :style="bmi >= 40 && age >= 20 ? `color: ${result.color};` : ''">
+            >= 40.0
           </p>
         </div>
         <div class="column is-7 is-result-columns">
-          <p>
+          <p :style="bmi >= 40 && age >= 20 ? `color: ${result.color};` : ''">
             Obesity Class III
           </p>
         </div>
@@ -200,7 +200,7 @@ export default {
     result () {
       if (this.age < 20) return { value: '', color: 'white'}
 
-      if (this.bmi < 18.5) {
+      if (this.bmi < 18.5 && this.bmi > 0) {
         return { value: 'Underweight', color: 'orange'}
       } else if (this.bmi < 25) {
         return { value: 'Normal', color: 'green'}

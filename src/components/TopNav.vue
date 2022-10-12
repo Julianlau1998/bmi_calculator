@@ -9,12 +9,11 @@
             <div class="column settingsWrapper">
                 <div v-if="settings" class="settingsItems settings">
                     <span v-if="helpAvailable">
-                        <span @click="openSettings" class="is-icon-container is-pointer mt-6 setting noselect">
+                        <span @click="openInfo" class="is-icon-container is-pointer mt-6 setting noselect">
                             <i
-                                class="fas fa-wrench is-smallIcon"
-                                @click="settings=!settings"
+                                class="fas fa-info is-smallIcon pr-1"
                             />
-                            {{ $t('settings.title') }}
+                            Info
                         </span>
                     </span>
                     <!-- <div class="hr" />
@@ -25,7 +24,6 @@
                     </span> -->
                 </div>
                 <i
-                    v-if="helpAvailable"
                     class="fas fa-bars settings-icon is-pointer"
                     @click="settings=!settings"
                 />
@@ -71,9 +69,8 @@ export default {
         help () {
             this.$router.push('/help')
         },
-        openSettings () {
-            this.$router.push('settings')
-            this.settings = false
+        openInfo () {
+            location.href = 'https://en.wikipedia.org/wiki/Body_mass_index'
         },
         home () {
             if (this.$route.path === '/') return
