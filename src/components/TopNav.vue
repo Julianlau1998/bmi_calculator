@@ -71,6 +71,7 @@ export default {
         },
         openInfo () {
             // location.href = 'https://en.wikipedia.org/wiki/Body_mass_index'
+          this.settings = false
           this.$router.push('/info')
         },
         home () {
