@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.bmiCalculatorJl.com",
+      "sha256_cert_fingerprints":
+      ["B0:9F:43:A1:A3:3E:12:7D:1C:EE:22:A7:76:8D:7B:87:A9:D0:97:90:4E:97:BD:34:59:D5:8A:28:11:61:EE:58"]
+    }
+  }
+]
