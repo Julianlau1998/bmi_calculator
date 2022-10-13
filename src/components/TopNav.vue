@@ -70,7 +70,8 @@ export default {
             this.$router.push('/help')
         },
         openInfo () {
-            location.href = 'https://en.wikipedia.org/wiki/Body_mass_index'
+            // location.href = 'https://en.wikipedia.org/wiki/Body_mass_index'
+          this.$router.push('/info')
         },
         home () {
             if (this.$route.path === '/') return
